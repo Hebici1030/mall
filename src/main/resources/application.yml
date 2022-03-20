@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall?serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+      #locations配置要严格注意空格
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mappers/*.xml
+server:
+  servlet:
+    session:
+      timeout: 10
